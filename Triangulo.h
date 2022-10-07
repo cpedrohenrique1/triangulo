@@ -118,8 +118,7 @@ bool Triangulo::tipoTriangulo() const
 
 double Triangulo::Area() const
 {
-    double t = (a + b + c) / 2;
-    return (sqrt(((t * (t - a)) * (t - b)) * (t - c)));
+    return (sqrt(((a+b+c)/2)*(((a+b+c)/2) - a)*(((a+b+c)/2) - b)*(((a+b+c)/2) - c)));
 }
 
 #endif
