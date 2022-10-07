@@ -69,30 +69,45 @@ bool Triangulo::tipoTriangulo() const
             cout << "Triangulo equilatero\n";
             return true;
         }
-        if (a == b && b != c || a == c && c != b || b == c && c != a)
+        else
         {
-            cout << "Triangulo isosceles\n";
-            return true;
-        }
-        if (a != b && b != c)
-        {
-            cout << "Triangulo escaleno\n";
-            return true;
-        }
-        if (a * a < (b * b) + (c * c))
-        {
-            cout << "Triangulo acutangulo\n";
-            return true;
-        }
-        if (a * a > (b * b) + (c * c))
-        {
-            cout << "Triangulo obtusangulo\n";
-            return true;
-        }
-        if (a * a == (b * b) + (c * c))
-        {
-            cout << "Triangulo retangulo\n";
-            return true;
+            if (a == b && b != c || a == c && c != b || b == c && c != a)
+            {
+                cout << "Triangulo isosceles\n";
+                return true;
+            }
+            else
+            {
+                if (a != b && b != c)
+                {
+                    cout << "Triangulo escaleno\n";
+                    return true;
+                }
+                else
+                {
+                    if (a * a < (b * b) + (c * c))
+                    {
+                        cout << "Triangulo acutangulo\n";
+                        return true;
+                    }
+                    else
+                    {
+                        if (a * a > (b * b) + (c * c))
+                        {
+                            cout << "Triangulo obtusangulo\n";
+                            return true;
+                        }
+                        else
+                        {
+                            if (a * a == (b * b) + (c * c))
+                            {
+                                cout << "Triangulo retangulo\n";
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     else
@@ -104,7 +119,7 @@ bool Triangulo::tipoTriangulo() const
 double Triangulo::Area() const
 {
     double t = (a + b + c) / 2;
-    return (sqrt(t * (t - a) * (t - b) * (t - c)));
+    return (sqrt(((t * (t - a)) * (t - b)) * (t - c)));
 }
 
 #endif

@@ -45,6 +45,7 @@ void TestaTriangulo::menu()
                 cin >> entrada;
             } while (Objeto->setC(entrada) == false);
         } while (Objeto->tipoTriangulo() == false);
+
         cout << "Area: " << Objeto->Area() << "\n";
         cout << "Digite 0 para encerrar o programa: ";
         cin >> flag;
